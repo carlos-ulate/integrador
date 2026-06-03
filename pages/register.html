@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexus Forge Gaming</title>
+
+    <title>Registro</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
@@ -18,9 +19,9 @@
 </head>
 
 <body>
-    <header>
+    <header class="nav-bar">
         <!--div para nav de bootsrap-->
-        <div class="container-fluid  nav-bar">
+        <div class="container-fluid ">
             <nav class="navbar navbar-expand-lg   ">
 
                 <p class="navbar-brand" href="#"><img class="header-logo" src="/assets/images/nexus_nav_log.png" alt="">
@@ -66,21 +67,110 @@
                 </div>
 
                 <!-- div para menu con imagen-->
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
+                <div class="drop-container  ">
+                    <label class="drop-img" for="drop-check">
                         <img class="img-profile" src="/assets/images/Portrait_Placeholder.png" alt="profile">
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Mi perfil</a></li>
-                        <li><a class="dropdown-item" href="#">Mis compras</a></li>
-                        <li><a class="dropdown-item" href="#">Carrito</a></li>
-                        <li><a class="dropdown-item" href="#">Configuracion</a></li>
-                        <li><a class="dropdown-item" href="#">Cerrar Sesion</a></li>
-                    </ul>
+                    </label>
+                    <input type="checkbox" id="drop-check">
+                    <div class="menu-container">
+                        <ul class="drop-menu">
+                            <li class="drop-item"><a href="#">Mi perfil</a></li>
+                            <li class="drop-item"><a href="#">Mis compras</a></li>
+                            <li class="drop-item"><a href="#">Carrito</a></li>
+                            <li class="drop-item"><a href="#">Configuracion</a></li>
+                            <li class="drop-item"><a href="#">Cerrar Sesion</a></li>
+                        </ul>
+                    </div>
                 </div>
 
 
             </nav>
         </div>
     </header>
+
+    <main>
+        <section class="registro">
+            <div class="register-body">
+                <h1>Registro</h1>
+                <p>Si desea formar parte de nuestro equipo o registrar una nueva cuenta, por favor complete el
+                    formulario a
+                    continuación.</p>
+            </div>
+            <div class="register-form">
+                <form class="contact-form  registro-form" method="post">
+                    <label for="nombre">Nombre</label><br>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Carlos"><br>
+                    <label for="apellido">Apellido</label><br>
+                    <input type="text" id="apellido" name="apellido" required placeholder="Ulate"><br>
+                    <label for="email">Correo Electrónico</label><br>
+                    <input type="email" id="email" name="email" required placeholder="example@nexforge.com"
+                        minlength="15" maxlength="30"><br>
+
+                    <label for="contrasena">Contraseña</label><br>
+                    <input type="password" id="contrasena" name="contrasena" requeried minlength="10"
+                        placeholder="**********"><br>
+                    <label for="contrasena">Confirmar Contraseña</label><br>
+                    <input type="password" id="contrasena" name="contrasena" requeried minlength="10"
+                        placeholder="**********"><br>
+
+                    <label for="fecha">Fecha de Nacimiento</label><br>
+                    <input type="date" id="fecha" name="fecha" required><br>
+
+                    <label for="pais">Elija un pais</label><br>
+                    <select name="pais" id="pais" required>
+                        <option value="costa-rica">Costa Rica</option>
+                        <option value="argentina">Argentina</option>
+                        <option value="estados-unidos">Estados Unidos</option>
+                        <option value="noruega">Noruega</option>
+                        <option value="espana">España</option>
+                        <option value="portugal">Portugal</option>
+
+
+                    </select><br><br>
+
+                    <button type="submit" class="button-contact">Enviar</button>
+                </form>
+
+            </div>
+        </section>
+    </main>
+
+
+
+</body>
+
+<footer>
+    <section id="contacto">
+        <div class="contact-footer">
+            <h2>Contacto</h2>
+            <p>Si tienes alguna pregunta o sugerencia, no dudes en contactarnos.</p>
+            <p>E-mail: <a href="mailto:info@nexus.com">info@nexus.com</a></p>
+            <p>Teléfono: <a href="tel:+50685607890">+506 8523-0740</a></p>
+            <p>Dirección: Avenida 4, Venecia, Alajuela, Costa Rica</p>
+        </div>
+    </section>
+
+    <section id="social">
+
+        <div class="social-media">
+            <h2>Redes Sociales</h2>
+            <p>Síguenos en nuestras redes sociales para estar al tanto de las últimas novedades, promociones y
+                eventos:</p>
+            <a href="https://www.facebook.com/nexusforgegaming" target="_blank"><i
+                    class="fab fa-facebook  social-icon"></i><span class="social-text">Facebook</span></a>
+            <a href="https://www.twitter.com/nexusforgegaming" target="_blank"><i
+                    class="fab fa-twitter social-icon"></i><span class="social-text">Twitter</span></a>
+            <a href="https://www.instagram.com/nexusforgegaming" target="_blank"><i
+                    class="fab fa-instagram social-icon"></i><span class="social-text">Instagram</span></a>
+            <a href="https://www.youtube.com/nexusforgegaming" target="_blank"><i
+                    class="fab fa-youtube social-icon"></i><span class="social-text">YouTube</span></a>
+        </div>
+    </section>
+
+    <section id="copyright">
+        <div class="derechos">
+            <img class="logo-footer" src="/assets/images/nexus_nav_log.png" alt="logo_footer">
+            <p>&copy; 2024 Nexus Forge Gaming. Todos los derechos reservados.</p>
+        </div>
+    </section>
+</footer>

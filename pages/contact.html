@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -67,18 +67,20 @@
                 </div>
 
                 <!-- div para menu con imagen-->
-                <div class="dropdown dropstart  ">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
+                <div class="drop-container  ">
+                    <label class="drop-img" for="drop-check">
                         <img class="img-profile" src="/assets/images/Portrait_Placeholder.png" alt="profile">
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Mi perfil</a></li>
-                        <li><a class="dropdown-item" href="#">Mis compras</a></li>
-                        <li><a class="dropdown-item" href="#">Carrito</a></li>
-                        <li><a class="dropdown-item" href="#">Configuracion</a></li>
-                        <li><a class="dropdown-item" href="#">Cerrar Sesion</a></li>
-                    </ul>
+                    </label>
+                    <input type="checkbox" id="drop-check" >
+                    <div class="menu-container">
+                        <ul class="drop-menu">
+                            <li class="drop-item"><a  href="#">Mi perfil</a></li>
+                            <li class="drop-item"><a  href="#">Mis compras</a></li>
+                            <li class="drop-item"><a  href="#">Carrito</a></li>
+                            <li class="drop-item"><a  href="#">Configuracion</a></li>
+                            <li class="drop-item"><a  href="#">Cerrar Sesion</a></li>
+                        </ul>
+                    </div>
                 </div>
 
 
@@ -86,40 +88,47 @@
         </div>
     </header>
 
-       <div class="contact-header">
-            <h1>Contacto</h1>
-            <p>Si tienes alguna pregunta o necesitas ayuda, no dudes en contactarnos. Estamos aquí para ayudarte.</p>
+    <div class="contact-header">
+        <h1>Contacto</h1>
+        <p>Si tienes alguna pregunta o necesitas ayuda, no dudes en contactarnos. Estamos aquí para ayudarte.</p>
 
 
-            <h2>Información de Contacto</h2>
+        <h2>Información de Contacto</h2>
 
-            
-        </div class="contact-header">
+
+    </div class="contact-header">
     <main class="contact-body">
-     
+
         </div>
         <div class="contact-info">
             <form class="contact-form" method="post">
                 <label for="nombre">Nombre</label><br>
                 <input type="text" id="nombre" name="nombre" required placeholder="Carlos"><br>
                 <label for="apellido">Apellido</label><br>
-                <input type="text" id="apellido" name="apellido" required placeholder="Ulate" ><br>
+                <input type="text" id="apellido" name="apellido" required placeholder="Ulate"><br>
                 <label for="email">Correo Electrónico</label><br>
-                <input type="email" id="email" name="email" required placeholder="example@nexforge.com" minlength="15" maxlength="30"><br>
+                <input type="email" id="email" name="email" required placeholder="example@nexforge.com" minlength="15"
+                    maxlength="30"><br>
                 <label for="mensaje">Mensaje</label><br>
-                <textarea id="mensaje" name="mensaje" required placeholder="Escribe tu mensaje aquí..."
-                    rows="10" cols="35" minlength="20" maxlength="1000"></textarea><br>
+                <textarea id="mensaje" name="mensaje" required placeholder="Escribe tu mensaje aquí..." rows="10"
+                    cols="35" minlength="20" maxlength="1000"></textarea><br>
                 <button type="submit" class="button-contact">Enviar</button>
             </form>
         </div>
 
-        <div class="map">
-        
-            <h2>Ubicación</h2>
-            <p>Visítanos en nuestra tienda física o contáctanos para más información.</p>
-           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15699.257204046966!2d-84.284781740591!3d10.356728444473847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0629b6d27dfe5%3A0x9ccf9829e48757c0!2sProvincia%20de%20Alajuela%2C%20Venecia!5e0!3m2!1ses!2scr!4v1780440181320!5m2!1ses!2scr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+        <section class="ubicacion">
+            <div class="location">
+                <h2>Ubicación</h2>
+                <p>Visítanos en nuestra tienda física o contáctanos para más información.</p>
+            </div>
+            <div class="map">
 
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15699.257204046966!2d-84.284781740591!3d10.356728444473847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0629b6d27dfe5%3A0x9ccf9829e48757c0!2sProvincia%20de%20Alajuela%2C%20Venecia!5e0!3m2!1ses!2scr!4v1780440181320!5m2!1ses!2scr"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
     </main>
 
 
