@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexus Forge Gaming</title>
+
+    <title>Productos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
@@ -18,9 +20,9 @@
 </head>
 
 <body>
-    <header>
+    <header class="nav-bar">
         <!--div para nav de bootsrap-->
-        <div class="container-fluid  nav-bar">
+        <div class="container-fluid ">
             <nav class="navbar navbar-expand-lg   ">
 
                 <p class="navbar-brand" href="#"><img class="header-logo" src="/assets/images/nexus_nav_log.png" alt="">
@@ -52,7 +54,8 @@
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                        <input class="form-control me-2 search" type="search" placeholder="Search"
+                            aria-label="Search" />
                         <button class="btn btn-outline-success button-search" type="submit">Search</button>
                     </form>
                 </div>
@@ -66,21 +69,317 @@
                 </div>
 
                 <!-- div para menu con imagen-->
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
+                <div class="drop-container  ">
+                    <label class="drop-img" for="drop-check">
                         <img class="img-profile" src="/assets/images/Portrait_Placeholder.png" alt="profile">
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Mi perfil</a></li>
-                        <li><a class="dropdown-item" href="#">Mis compras</a></li>
-                        <li><a class="dropdown-item" href="#">Carrito</a></li>
-                        <li><a class="dropdown-item" href="#">Configuracion</a></li>
-                        <li><a class="dropdown-item" href="#">Cerrar Sesion</a></li>
-                    </ul>
+                    </label>
+                    <input type="checkbox" id="drop-check">
+                    <div class="menu-container">
+                        <ul class="drop-menu">
+                            <li class="drop-item"><a href="#">Mi perfil</a></li>
+                            <li class="drop-item"><a href="#">Mis compras</a></li>
+                            <li class="drop-item"><a href="#">Carrito</a></li>
+                            <li class="drop-item"><a href="#">Configuracion</a></li>
+                            <li class="drop-item"><a href="#">Cerrar Sesion</a></li>
+                        </ul>
+                    </div>
                 </div>
 
 
             </nav>
         </div>
     </header>
+
+    <main>
+        <div class="prod-title">
+            <h1>Productos</h1>
+            <p>Equipamiento de alta gama para jugadores exigentes. Encuentra los mejores componentes y periféricos para
+                forjar tu estación de batalla.</p>
+        </div>
+
+
+        <div class="product-layout">
+
+
+            <aside class="filter-bar">
+                <div class="marcas">
+                    <h5>Marcas</h5>
+                    <input type="checkbox" id="asus" name="asus" value="Asus">
+                    <label for="asus">Asus</label>
+                    <input type="checkbox" id="msi" name="msi" value="Msi">
+                    <label for="msi">Msi</label>
+                    <input type="checkbox" id="razer" name="razer" value="Razer">
+                    <label for="razer">Razer</label>
+                    <input type="checkbox" id="redragon" name="redragon" value="Redragon">
+                    <label for="redragon">Redragon</label>
+                    <input type="checkbox" id="xyz" name="xyz" value="XYZ">
+                    <label for="xyz">XYZ</label>
+                    <input type="checkbox" id="adata" name="adata" value="Adata">
+                    <label for="adata">Adata</label>
+                    <input type="checkbox" id="samsung" name="samsung" value="Samsung">
+                    <label for="samsung">Samsung</label>
+                    <input type="checkbox" id="logitech" name="logitech" value="Logitech">
+                    <label for="logitech">Logitech</label>
+                    <input type="checkbox" id="darkflash" name="darkflash" value="Darkflash">
+                    <label for="darkflash">Darkflash</label>
+
+                </div><br>
+
+                <div class="category">
+                    <h5>Categoria</h5>
+                    <label for="categoria"> Seleccione Categoria</label>
+                    <select name="categoria" id="categoria">
+                        <option value="monitor">Monitor</option>
+                        <option value="audifono">Audifonos</option>
+                        <option value="teclado">Teclados</option>
+                        <option value="case">Case</option>
+                        <option value="enfriamiento">Enfriamiento</option>
+                        <option value="memoria-ram">Memoria Ram</option>
+                        <option value="webcam">Web cam</option>
+                    </select>
+                </div>
+            </aside>
+
+
+
+            <section class="product-section product">
+                <div class=" container">
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="/assets/images/products/nvidia_5070ti.jpg" alt="nvidia_5070ti">
+                            <i class="bx bx-star"></i>
+                            <button class="view-more-btn" aria-label="Ver más">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+
+                        <div class="card-content">
+                            <h3>Tarjeta Grafica</h3>
+                            <p>Asus Tuf GeForce 5070 TI 16GB Gaming</p>
+                            <span class="price">$1000</span>
+                            <button class="add-to-cart">
+                                Agregar al carro
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="/assets/images/products/MSI _5050.webp" alt="nvidia_5050">
+                            <i class="bx bx-star"></i>
+                            <button class="view-more-btn" aria-label="Ver más">
+                                <i class="fas fa-eye"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="card-content">
+                            <h3>Tarjeta Grafica</h3>
+                            <p>MSI GeForce RTX 5050 8GB Gaming OC</p>
+                            <span class="price">$350</span>
+                            <button class="add-to-cart">
+                                Agregar al carro
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="/assets/images/products/razer_headset.avif" alt="razer_headset">
+                            <i class="bx bx-star"></i>
+                            <button class="view-more-btn" aria-label="Ver más">
+                                <i class="fas fa-eye"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="card-content">
+                            <h3>Audifonos</h3>
+                            <p>Razer BlackShark V3 Pro Wireless ANC Blanco</p>
+                            <span class="price">$230</span>
+                            <button class="add-to-cart">
+                                Agregar al carro
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="/assets/images/products/redragon_keyboard.jpg" alt="redragon_keyboard">
+                            <i class="bx bx-star"></i>
+                            <button class="view-more-btn" aria-label="Ver más">
+                                <i class="fas fa-eye"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="card-content">
+                            <h3>Perifericos</h3>
+                            <p>Redragon K552W Kumara RGB</p>
+                            <span class="price">$35</span>
+                            <button class="add-to-cart">
+                                Agregar al carro
+                            </button>
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="/assets/images/products/case.webp" alt="case">
+                            <i class="bx bx-star"></i>
+                            <button class="view-more-btn" aria-label="Ver más">
+                                <i class="fas fa-eye"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="card-content">
+                            <h3>Case</h3>
+                            <p>XYZ Aurorax 50 Negro XYZ-SA-1020</p>
+                            <span class="price">$60</span>
+                            <button class="add-to-cart">
+                                Agregar al carro
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="/assets/images/products/enfriamiento.jpg" alt="enfriamiento_liquido">
+                            <i class="bx bx-star"></i>
+                            <button class="view-more-btn" aria-label="Ver más">
+                                <i class="fas fa-eye"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="card-content">
+                            <h3>Enfriamiento Liquido</h3>
+                            <p>Darkflash Nebula Series DN3600D</p>
+                            <span class="price">$80</span>
+                            <button class="add-to-cart">
+                                Agregar al carro
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="/assets/images/products/ram.webp" alt="memoria_ram">
+                            <i class="bx bx-star"></i>
+                            <button class="view-more-btn" aria-label="Ver más">
+                                <i class="fas fa-eye"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="card-content">
+                            <h3>Memoria RAM</h3>
+                            <p>Adata XPG Armax RGB 16GB DDR5 5600</p>
+                            <span class="price">$75</span>
+                            <button class="add-to-cart">
+                                Agregar al carro
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="/assets/images/products/samsung_oled.jpg" alt="samsung_monitor">
+                            <i class="bx bx-star"></i>
+                            <button class="view-more-btn" aria-label="Ver más">
+                                <i class="fas fa-eye"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="card-content">
+                            <h3>Monitores</h3>
+                            <p>Samsung Odyssey G8 27″ Oled 4k 240Hz</p>
+                            <span class="price">$1299.99</span>
+                            <button class="add-to-cart">
+                                Agregar al carro
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="/assets/images/products/logitech_camara.jpg" alt="camara_logitech">
+                            <i class="bx bx-star"></i>
+                            <button class="view-more-btn" aria-label="Ver más">
+                                <i class="fas fa-eye"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="card-content">
+                            <h3>Webcam</h3>
+                            <p>Logitech MX Brio </p>
+                            <span class="price">$169.99</span>
+                            <button class="add-to-cart">
+                                Agregar al carro
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+
+
+
+    </main>
+
+    <footer>
+        <section id="contacto">
+            <div class="contact-footer">
+                <h2>Contacto</h2>
+                <p>Si tienes alguna pregunta o sugerencia, no dudes en contactarnos.</p>
+                <p>E-mail: <a href="mailto:info@nexus.com">info@nexus.com</a></p>
+                <p>Teléfono: <a href="tel:+50685607890">+506 8523-0740</a></p>
+                <p>Dirección: Avenida 4, Venecia, Alajuela, Costa Rica</p>
+            </div>
+        </section>
+
+        <section id="social">
+
+            <div class="social-media">
+                <h2>Redes Sociales</h2>
+                <p>Síguenos en nuestras redes sociales para estar al tanto de las últimas novedades, promociones y
+                    eventos:</p>
+                <a href="https://www.facebook.com/nexusforgegaming" target="_blank"><i
+                        class="fab fa-facebook  social-icon"></i><span class="social-text">Facebook</span></a>
+                <a href="https://www.twitter.com/nexusforgegaming" target="_blank"><i
+                        class="fab fa-twitter social-icon"></i><span class="social-text">Twitter</span></a>
+                <a href="https://www.instagram.com/nexusforgegaming" target="_blank"><i
+                        class="fab fa-instagram social-icon"></i><span class="social-text">Instagram</span></a>
+                <a href="https://www.youtube.com/nexusforgegaming" target="_blank"><i
+                        class="fab fa-youtube social-icon"></i><span class="social-text">YouTube</span></a>
+            </div>
+        </section>
+
+        <section id="copyright">
+            <div class="derechos">
+                <img class="logo-footer" src="/assets/images/nexus_nav_log.png" alt="logo_footer">
+                <p>&copy; 2024 Nexus Forge Gaming. Todos los derechos reservados.</p>
+            </div>
+        </section>
+    </footer>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+</html>
