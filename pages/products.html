@@ -11,7 +11,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-        
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
@@ -100,44 +100,123 @@
 
         <div class="product-layout">
 
-
+            <input type="checkbox" name="" id="filtrar">
+            <label for="filtrar">Filtrar</label>
+            
             <aside class="filter-bar">
                 <div class="marcas">
                     <h5>Marcas</h5>
-                    <input type="checkbox" id="asus" name="asus" value="Asus">
-                    <label for="asus">Asus</label>
-                    <input type="checkbox" id="msi" name="msi" value="Msi">
-                    <label for="msi">Msi</label>
-                    <input type="checkbox" id="razer" name="razer" value="Razer">
-                    <label for="razer">Razer</label>
-                    <input type="checkbox" id="redragon" name="redragon" value="Redragon">
-                    <label for="redragon">Redragon</label>
-                    <input type="checkbox" id="xyz" name="xyz" value="XYZ">
-                    <label for="xyz">XYZ</label>
-                    <input type="checkbox" id="adata" name="adata" value="Adata">
-                    <label for="adata">Adata</label>
-                    <input type="checkbox" id="samsung" name="samsung" value="Samsung">
-                    <label for="samsung">Samsung</label>
-                    <input type="checkbox" id="logitech" name="logitech" value="Logitech">
-                    <label for="logitech">Logitech</label>
-                    <input type="checkbox" id="darkflash" name="darkflash" value="Darkflash">
-                    <label for="darkflash">Darkflash</label>
+                    <div class="check">
+                        <input type="checkbox" id="asus" name="asus" value="Asus">
+                        <label for="asus">Asus</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" id="msi" name="msi" value="Msi">
+                        <label for="msi">Msi</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" id="razer" name="razer" value="Razer">
+                        <label for="razer">Razer</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" id="redragon" name="redragon" value="Redragon">
+                        <label for="redragon">Redragon</label>
+                    </div>
+
+                    <div class="check">
+                        <input type="checkbox" id="xyz" name="xyz" value="XYZ">
+                        <label for="xyz">XYZ</label>
+                    </div>
+
+                    <div class="check">
+                        <input type="checkbox" id="adata" name="adata" value="Adata">
+                        <label for="adata">Adata</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" id="samsung" name="samsung" value="Samsung">
+                        <label for="samsung">Samsung</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" id="logitech" name="logitech" value="Logitech">
+                        <label for="logitech">Logitech</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" id="darkflash" name="darkflash" value="Darkflash">
+                        <label for="darkflash">Darkflash</label>
+                    </div>
 
                 </div><br>
 
                 <div class="category">
                     <h5>Categoria</h5>
-                    <label for="categoria"> Seleccione Categoria</label>
-                    <select name="categoria" id="categoria">
-                        <option value="monitor">Monitor</option>
-                        <option value="audifono">Audifonos</option>
-                        <option value="teclado">Teclados</option>
-                        <option value="case">Case</option>
-                        <option value="enfriamiento">Enfriamiento</option>
-                        <option value="memoria-ram">Memoria Ram</option>
-                        <option value="webcam">Web cam</option>
-                    </select>
-                </div>
+
+                    <div class="check">
+                        <input type="checkbox" id="monitor" name="monitor" value="Monitor">
+                        <label for="monitor">Monitor</label>
+                    </div>
+
+                    <div class="check">
+                        <input type="checkbox" id="tarjeta grafica" name="tarjeta grafica" value="Tarjeta_grafica">
+                        <label for="tarjeta grafica">Tarjeta grafica</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" id="audifonos" name="audifonos" value="Audifonos">
+                        <label for="audifonos">Audifonos</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" id="teclado" name="teclado" value="Teclado">
+                        <label for="teclado">Teclado</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" id="case" name="case" value="Case">
+                        <label for="case">Case</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" id="enfriamiento" name="enfriamiento" value="Enfriamiento">
+                        <label for="enfriamiento">Enfriamiento</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" id="memoria ram" name="memoria ram" value="Memoria_Ram">
+                        <label for="memoria ram">Memoria RAM</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" id="camara" name="camara" value="Camaras">
+                        <label for="camara">Camaras</label>
+                    </div><br>
+
+                    <div class="panel">
+                        <h5>Tipo de Panel</h5>
+
+                        <div class="check">
+                            <input type="checkbox" id="ips" name="ips" value="IPS">
+                            <label for="ips">IPS</label>
+                        </div>
+
+                        <div class="check">
+                            <input type="checkbox" id="oled" name="oled" value="OLED">
+                            <label for="oled">OLED</label>
+                        </div>
+
+                        <div class="check">
+                            <input type="checkbox" id="va" name="va" value="VA">
+                            <label for="va">VA</label>
+                        </div>
+                    </div><br>
+
+                    <div class="teclado">
+                        <h5>Tipo de Teclado</h5>
+
+                        <div class="check">
+                            <input type="checkbox" id="mecanico" name="mecanico" value="Mecanico">
+                            <label for="mecanico">Mecanico</label>
+                        </div>
+
+                        <div class="check">
+                            <input type="checkbox" id="membrana" name="membrana" value="Membrana">
+                            <label for="membrana">Membrana</label>
+                        </div>
+                    </div>
+
             </aside>
 
 
@@ -169,7 +248,7 @@
                             <img src="/assets/images/products/MSI _5050.webp" alt="nvidia_5050">
                             <i class="bx bx-star"></i>
                             <button class="view-more-btn" aria-label="Ver más">
-                                <i class="fas fa-eye"></i>
+                                <i class="fas fa-eye"><a href=""></a></i>
                             </button>
 
                         </div>

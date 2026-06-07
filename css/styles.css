@@ -486,6 +486,46 @@ select {
 }
 
 @media (width < 1200px) {
+
+  /* filtro para categorias revisar width*/
+    label[for="filtrar"] {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 4px;
+        margin-bottom: 15px;
+        
+    }
+
+    /* oculta */
+    #filtrar {
+        display: none;
+        
+    }
+
+    /* se oculta la barra  */
+    .filter-bar {
+        display: none;
+        width: 100%; /* Ocupa todo el ancho en móviles */
+        background-color: var(--background-secondary);
+        padding: 15px;
+        border: 1px solid var(--background);
+    }
+
+    /* se muestra cuando se selecciona..  */
+    #filtrar:checked + label + .filter-bar {
+        display: block;
+    }
+}
+
+  .product-layout {
+    display: flex;
+    flex:1;
+  }
+
+
   .search {
     display: none;
   }
@@ -527,7 +567,7 @@ select {
     flex-direction: column;
     text-align: center;
   }
-}
+
 @media (width <768px) {
   .search {
     display: none;
@@ -607,11 +647,15 @@ select {
 .product-layout {
   display: flex;
   justify-content: space-between;
+   
 }
 
-.marcas {
+.marcas,
+.category, .panel, .teclado {
   display: flex;
   flex-direction: column;
+  padding: 5px;
+  gap:3px;
 
   h5 {
     text-align: center;
@@ -619,10 +663,22 @@ select {
 }
 
 .filter-bar {
-  border: 1px solid var(--background-secondary);
+  
   padding: 5px;
-  height: auto;
+  height: 100%;
   width: 280px;
-
- 
+  
+  top: 15%;
+   
 }
+
+.prod-title {
+  h1{
+    text-align: center;
+  }
+
+  p{
+    padding-left: 10px;
+  }
+}
+
