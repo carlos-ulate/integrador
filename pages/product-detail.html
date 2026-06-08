@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Productos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body class="detail-body">
+    <header class="nav-bar">
+        <!--div para nav de bootsrap-->
+        <div class="container-fluid ">
+            <nav class="navbar navbar-expand-lg   ">
+
+                <p class="navbar-brand" href="#"><img class="header-logo" src="/assets/images/nexus_nav_log.png" alt="">
+                </p>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0  ">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/index.html">Principal</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pages/products.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pages/register.html">Registro</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pages/contact.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pages/about.html">Acerca De</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pages/admin-products.html">Admin Productos</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2 search" type="search" placeholder="Search"
+                            aria-label="Search" />
+                        <button class="btn btn-outline-success button-search" type="submit">Search</button>
+                    </form>
+                </div>
+
+                <!--div para cart (carrito)-->
+                <div class="cart-shop">
+                    <a href="#" class="cart">
+                        <i class="fas fa-shopping-cart  cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+
+                <!-- div para menu con imagen-->
+                <div class="drop-container  ">
+                    <label class="drop-img" for="drop-check">
+                        <img class="img-profile" src="/assets/images/Portrait_Placeholder.png" alt="profile">
+                    </label>
+                    <input type="checkbox" id="drop-check">
+                    <div class="menu-container">
+                        <ul class="drop-menu">
+                            <li class="drop-item"><a href="#">Mi perfil</a></li>
+                            <li class="drop-item"><a href="#">Mis compras</a></li>
+                            <li class="drop-item"><a href="#">Carrito</a></li>
+                            <li class="drop-item"><a href="#">Configuracion</a></li>
+                            <li class="drop-item"><a href="#">Cerrar Sesion</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </nav>
+        </div>
+    </header>
+    
+
+    <main >
+        <section class="detalles">
+        <div class="det-img">
+            <img src="/assets/images/products/nvidia_5070ti.jpg" alt="5070_nvidia">
+        </div>
+
+        <div>
+            <h2>Detalles</h2>
+            <p>La NVIDIA GeForce RTX 5070 Ti se posiciona como una de las tarjetas gráficas más equilibradas y potentes de la arquitectura Blackwell, diseñada específicamente para dominar el juego competitivo y de alta gama en resoluciones 1440p y 4K. Al combinar una eficiencia energética optimizada con la última generación de núcleos dedicados al trazado de rayos (Ray Tracing) y la renderización por inteligencia artificial, este componente no solo eleva las tasas de refresco a niveles extremos, sino que también transforma la experiencia visual. Es la opción ideal para los entusiastas del hardware y creadores de contenido que buscan un rendimiento de nivel entusiasta sin tener que dar el salto económico hacia la gama ultra-alta.</p>
+
+            <h2>Caracteristicas</h2>
+
+            <ul>
+                <li>Arquitectura: NVIDIA Blackwell (tecnología de proceso de 3nm de TSMC)</li>
+                <li>Memoria VRAM: <span class="inf">16GB GDDR7</span>, ofreciendo un ancho de banda masivo y mayor velocidad que la generación anterior.</li>
+
+                <li>Interfaz de Memoria: Bus de <span class="inf">256 bits</span>.</li>
+
+                <li>Núcleos CUDA: Aproximadamente <span class="inf">8960 núcleos</span> para un procesamiento paralelo masivo.</li>
+
+                <li>Ray Tracing de 4.ª Generación: Rendimiento duplicado en iluminación realista, reflejos y sombras en tiempo real.</li>
+
+                <li>Tensor Cores de 5.ª Generación: Optimización extrema para tareas de Inteligencia Artificial y <span class="inf">compatibilidad exclusiva con DLSS 4</span> (Multiplicación de Fotogramas por IA).</li>
+
+                <li>Consumo Energético (TDP): Alrededor de <span class="inf">250W - 275W</span>, manteniendo una excelente relación de rendimiento por vatio.</li>
+
+                <li>Conectividad: <span class="inf">Puertos DisplayPort</span> 2.1 y <span class="inf">HDMI 2.1a</span>, listos para monitores con altas tasas de refresco en <span class="inf">4K</span> y <span class="inf">8K</span>.</li>
+
+                <li>Soporte de Códec: Codificadores duales AV1 de 8.ª generación (NVENC), ideales para streaming de alta fidelidad y edición de video ultrarrápida.</li>
+
+
+            </ul>
+        </div>
+</section>
+
+    </main>
+
+
+ <footer>
+        <section id="contacto">
+            <div class="contact-footer">
+                <h2>Contacto</h2>
+                <p>Si tienes alguna pregunta o sugerencia, no dudes en contactarnos.</p>
+                <p>E-mail: <a href="mailto:info@nexus.com">info@nexus.com</a></p>
+                <p>Teléfono: <a href="tel:+50685607890">+506 8523-0740</a></p>
+                <p>Dirección: Avenida 4, Venecia, Alajuela, Costa Rica</p>
+            </div>
+        </section>
+
+        <section id="social">
+
+            <div class="social-media">
+                <h2>Redes Sociales</h2>
+                <p>Síguenos en nuestras redes sociales para estar al tanto de las últimas novedades, promociones y
+                    eventos:</p>
+                <a href="https://www.facebook.com/nexusforgegaming" target="_blank"><i
+                        class="fab fa-facebook  social-icon"></i><span class="social-text">Facebook</span></a>
+                <a href="https://www.twitter.com/nexusforgegaming" target="_blank"><i
+                        class="fab fa-twitter social-icon"></i><span class="social-text">Twitter</span></a>
+                <a href="https://www.instagram.com/nexusforgegaming" target="_blank"><i
+                        class="fab fa-instagram social-icon"></i><span class="social-text">Instagram</span></a>
+                <a href="https://www.youtube.com/nexusforgegaming" target="_blank"><i
+                        class="fab fa-youtube social-icon"></i><span class="social-text">YouTube</span></a>
+            </div>
+        </section>
+
+        <section id="copyright">
+            <div class="derechos">
+                <img class="logo-footer" src="/assets/images/nexus_nav_log.png" alt="logo_footer">
+                <p>&copy; 2024 Nexus Forge Gaming. Todos los derechos reservados.</p>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>
