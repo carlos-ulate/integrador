@@ -589,9 +589,58 @@ label[for="filtrar"] {
   justify-content: center;
   padding: 15px;
 
+  h6 {
+    text-align: left;
+    font-weight: light;
+  }
+
+  .det-img {
+    p {
+      font-weight: 500;
+      font-size: x-large;
+    }
+  }
+
   h2 {
-    text-align: center;
     margin-top: 5px;
+  }
+
+  p {
+    margin-left: 15px;
+  }
+
+  button {
+    cursor: pointer;
+    color: var(--background);
+    width: 50%;
+    height: 50px;
+    font-size: 22px;
+    font-weight: 600;
+    border-radius: 12px;
+    background: var(--bg-btns);
+  }
+}
+
+.table-title {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+.adm-prod {
+  tr,
+  th,
+  td {
+    border: 2px solid var(--color);
+    padding: 5px;
+    text-align: center;
+  }
+
+  table {
+    margin: 15px;
+  }
+
+  img {
+    width: 130px;
   }
 }
 
@@ -645,6 +694,16 @@ label[for="filtrar"] {
 
   .product-section .container {
     justify-content: center;
+  }
+
+  .detalles {
+    button {
+      margin-bottom: 10px;
+    }
+  }
+
+  .search {
+    display: none;
   }
 }
 
@@ -738,7 +797,7 @@ label[for="filtrar"] {
     transition:
       0.3s ease,
       opacity 0.3s;
-     
+
     overflow-y: auto;
   }
 
@@ -764,16 +823,56 @@ label[for="filtrar"] {
       text-align: center;
     }
   }
+
+  .detalles {
+    button {
+      margin-bottom: 10px;
+    }
+  }
+
+  #hero {
+    display: flex;
+    flex-direction: column;
+
+    img {
+      width: 50%;
+    }
+
+    #hero-img-container {
+      text-align: center;
+    }
+  }
+
+  /*   Forzar   contenedor a respetar el ancho de la pantalla (revisar max width) */
+  .adm-prod {
+    width: 100%;
+    max-width: 100vw; /* Evitar que el contenedor sea más grande que la pantalla */
+    overflow-x: auto;
+    overflow-y: hidden; /* para evitar barra vertical  */
+    display: block; /* Asegurar   comportamiento   bloque */
+    box-sizing: border-box;
+  }
+
+  /*   Mantener la tabla con un tamaño mínimo  */
+  .adm-table {
+    width: 100%;
+    min-width: 750px; /* width para activar el scroll*/
+    border-collapse: collapse;
+  }
+
+  /* se agrega para evitar que el texto rompa las celdas  */
+  .adm-table th,
+  .adm-table td {
+    padding: 10px;
+    text-align: center;
+    white-space: normal; /* se agrega para  que nombres largos salten de línea sin estirar la tabla al infinito (como wrap) */
+  }
 }
 
 @media (width < 478px) {
   footer {
     display: flex;
     flex-direction: column;
-  }
-
-  .hero-video {
-    display: none;
   }
 
   #hero {
@@ -828,7 +927,7 @@ label[for="filtrar"] {
     transition:
       0.3s ease,
       opacity 0.3s;
-     
+
     overflow-y: auto;
   }
 
@@ -854,6 +953,41 @@ label[for="filtrar"] {
       text-align: center;
     }
   }
+
+  .detalles {
+    button {
+      margin-bottom: 10px;
+      width: 70%;
+    }
+
+    img {
+      width: 50%;
+    }
+  }
+
+  .adm-prod {
+    width: 100%;
+    max-width: 100vw; /* Evitar que el contenedor sea más grande que la pantalla */
+    overflow-x: auto;
+    overflow-y: hidden; /* para evitar barra vertical  */
+    display: block; /* Asegurar   comportamiento   bloque */
+    box-sizing: border-box;
+  }
+
+  /*   Mantener la tabla con un tamaño mínimo  */
+  .adm-table {
+    width: 100%;
+    min-width: 750px; /* width para activar el scroll*/
+    border-collapse: collapse;
+  }
+
+  /* se agrega para evitar que el texto rompa las celdas  */
+  .adm-table th,
+  .adm-table td {
+    padding: 10px;
+    text-align: center;
+    white-space: normal; /* se agrega para  que nombres largos salten de línea sin estirar la tabla al infinito (como wrap) */
+  }
 }
 
 @media (width < 900px) {
@@ -865,5 +999,76 @@ label[for="filtrar"] {
     .det-img {
       text-align: center;
     }
+  }
+
+  .detalles {
+    button {
+      margin-bottom: 10px;
+    }
+  }
+
+  #hero {
+    display: flex;
+    flex-direction: column;
+
+    img {
+      width: 50%;
+    }
+
+    #hero-img-container {
+      text-align: center;
+    }
+  }
+  .adm-prod {
+    width: 100%;
+    max-width: 100vw; /* Evitar que el contenedor sea más grande que la pantalla */
+    overflow-x: auto;
+    overflow-y: hidden; /* para evitar barra vertical  */
+    display: block; /* Asegurar   comportamiento   bloque */
+    box-sizing: border-box;
+  }
+
+  /*   Mantener la tabla con un tamaño mínimo  */
+  .adm-table {
+    width: 100%;
+    min-width: 750px; /* width para activar el scroll*/
+    border-collapse: collapse;
+  }
+
+  /* se agrega para evitar que el texto rompa las celdas  */
+  .adm-table th,
+  .adm-table td {
+    padding: 10px;
+    text-align: center;
+    white-space: normal; /* se agrega para  que nombres largos salten de línea sin estirar la tabla al infinito (como wrap) */
+  }
+}
+
+@media (width<700px) {
+  .carousel-phrase {
+    display: none;
+  }
+  .adm-prod {
+    width: 100%;
+    max-width: 100vw; /* Evitar que el contenedor sea más grande que la pantalla */
+    overflow-x: auto;
+    overflow-y: hidden; /* para evitar barra vertical  */
+    display: block; /* Asegurar   comportamiento   bloque */
+    box-sizing: border-box;
+  }
+
+  /*   Mantener la tabla con un tamaño mínimo  */
+  .adm-table {
+    width: 100%;
+    min-width: 750px; /* width para activar el scroll*/
+    border-collapse: collapse;
+  }
+
+  /* se agrega para evitar que el texto rompa las celdas  */
+  .adm-table th,
+  .adm-table td {
+    padding: 10px;
+    text-align: center;
+    white-space: normal; /* se agrega para  que nombres largos salten de línea sin estirar la tabla al infinito (como wrap) */
   }
 }
