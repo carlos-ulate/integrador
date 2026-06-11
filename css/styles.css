@@ -10,7 +10,8 @@
 
 :root {
   --background: #f4f6f9;
-  --background-secondary: #cfcfcf;
+  --background-secondary: #d8d8d8;
+  --card-bg-hover: #cfcfcf;
   --color: #111625;
   --color-secondary: #68768a;
   --accent: #00c2ff;
@@ -19,6 +20,10 @@
   --bg-btns-secondary: linear-gradient(135deg, #7c3aed, #06b6d4, #10b981);
   --font-family: "Inter", sans-serif;
   --card-bg: #f1d7e7;
+}
+
+html {
+  font-family: var(--font-family);
 }
 
 body {
@@ -130,6 +135,41 @@ main {
   font-size: 20px;
 }
 
+.about-title {
+  margin-bottom: 20px;
+}
+
+#hero-about {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .hero-abt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 5px;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .img-about {
+    width: 100%;
+    margin: 15px;
+    border: 2px solid var(--card-bg-hover);
+    border-radius: 5%;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8);
+  }
+
+  .about-flex-container {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
 .prod {
   .section-title {
     text-align: center;
@@ -164,8 +204,12 @@ main {
 
 .img-profile {
   width: 50px;
-  background: var(--bg-btns);
+  border: 3px solid var(--color-secondary);
   cursor: pointer;
+
+  &:hover {
+    border: 3px solid var(--card-bg-hover);
+  }
 }
 
 .drop-container {
@@ -186,10 +230,11 @@ main {
   position: absolute;
   top: 100%;
   right: 0;
-  background: var(--bg-btns-secondary);
+  background-color: #ffffff;
   height: 0;
   overflow: hidden;
   transition: 0.3s ease;
+  border-radius: 5px;
 
   .drop-menu {
     list-style: none;
@@ -203,10 +248,11 @@ main {
 
   a {
     text-decoration: none;
-    color: var(--color);
+    color: #64748b;
   }
 
   a:hover {
+    background: #f8fafc;
     color: var(--accent-secondary);
   }
 }
@@ -229,7 +275,7 @@ main {
 
 .card:hover {
   transform: scale(1.05);
-  background-color: var(--background-secondary);
+  background-color: var(--card-bg-hover);
   border-color: #bb00ff !important;
   box-shadow:
     0 0 25px rgba(187, 0, 255, 0.6),
@@ -439,7 +485,7 @@ footer {
 
   input,
   textarea {
-    border: 1px solid var(--background-secondary);
+    border: 1px solid var(--card-bg-hover);
     padding: 5px;
     margin: 5px 0;
   }
@@ -477,7 +523,7 @@ footer {
 input,
 select {
   padding: 5px;
-  border: 2px solid var(--background-secondary);
+  border: 2px solid var(--card-bg-hover);
 }
 
 .search {
@@ -498,7 +544,8 @@ select {
 }
 
 .contact-body {
-  flex-direction: column;
+  display: flex;
+  flex-direction: row;
 }
 .map {
   position: relative;
@@ -539,6 +586,7 @@ select {
 .prod-title {
   h1 {
     text-align: center;
+    margin-top: 15px;
   }
 
   p {
@@ -551,7 +599,6 @@ select {
   align-items: flex-start;
   gap: 30px;
   max-width: 1200px;
-  margin: 0 auto;
   padding: 20px;
 }
 
@@ -563,7 +610,7 @@ label[for="filtrar"] {
 
 .filter-bar {
   width: 280px;
-  background-color: var(--background-secondary);
+  background-color: var( --background);
   padding: 20px;
   border-radius: 6px;
   flex-shrink: 0;
