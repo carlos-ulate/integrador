@@ -135,41 +135,6 @@ main {
   font-size: 20px;
 }
 
-.about-title {
-  margin-bottom: 20px;
-}
-
-#hero-about {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-
-  .hero-abt {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    padding: 5px;
-
-    a {
-      text-decoration: none;
-    }
-  }
-
-  .img-about {
-    width: 100%;
-    margin: 15px;
-    border: 2px solid var(--card-bg-hover);
-    border-radius: 5%;
-    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8);
-  }
-
-  .about-flex-container {
-    display: flex;
-    flex-direction: row;
-  }
-}
-
 .prod {
   .section-title {
     text-align: center;
@@ -610,7 +575,7 @@ label[for="filtrar"] {
 
 .filter-bar {
   width: 280px;
-  background-color: var( --background);
+  background-color: var(--background);
   padding: 20px;
   border-radius: 6px;
   flex-shrink: 0;
@@ -691,7 +656,102 @@ label[for="filtrar"] {
   }
 }
 
+.about-title {
+  margin: 20px 0;
+  h2 {
+    text-align: center;
+  }
+}
+
+.hero-about {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .hero-abt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 5px;
+
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--accent-secondary);
+    }
+  }
+
+  .img-about {
+    width: 100%;
+    margin: 15px;
+    border: 2px solid var(--card-bg-hover);
+    border-radius: 5%;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8);
+  }
+
+  .about-flex-container {
+    display: flex;
+    flex-direction: row;
+
+    h2 {
+      text-align: center;
+    }
+  }
+
+  .eslogan {
+    p {
+      text-align: center;
+      font-size: x-large;
+      text-shadow: 5px 5px 7px var(--color);
+    }
+  }
+}
+
+.about-card {
+  border: 2px solid black;
+  padding: 5px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+  background-color: var(--card-bg-hover);
+
+  h3 {
+    text-align: center;
+  }
+
+  p {
+    padding-left: 5px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--accent-secondary);
+  }
+
+  .about-card-image {
+    img {
+      position: relative;
+      width: 230px;
+      height: 250px;
+      border-radius: 10px;
+    }
+  }
+}
+
 @media (width < 1200px) {
+  .serv,
+  .prod {
+    p {
+      padding: 0 10px;
+    }
+  }
+
   .product-layout {
     flex-direction: column;
     align-items: flex-start;
@@ -752,9 +812,32 @@ label[for="filtrar"] {
   .search {
     display: none;
   }
+
+  .about-title {
+    p {
+      padding: 0 10px;
+    }
+  }
+  .hero-about {
+    padding: 0 10px;
+
+    .about-flex-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .about-card {
+      width: 250px;
+      margin: 20px auto;
+    }
+
+    h3 {
+      padding-top: 5px;
+    }
+  }
 }
 
-@media (width <768px) {
+@media (width <= 768px) {
   footer {
     display: flex;
     flex-direction: column;
@@ -893,30 +976,28 @@ label[for="filtrar"] {
   /*   Forzar   contenedor a respetar el ancho de la pantalla (revisar max width) */
   .adm-prod {
     width: 100%;
-    max-width: 100vw; /* Evitar que el contenedor sea más grande que la pantalla */
+    max-width: 100vw; /*se agrega para evitar que el cntedor sea + grande que la pantalla */
     overflow-x: auto;
     overflow-y: hidden; /* para evitar barra vertical  */
-    display: block; /* Asegurar   comportamiento   bloque */
+    display: block;
     box-sizing: border-box;
   }
 
-  /*   Mantener la tabla con un tamaño mínimo  */
   .adm-table {
     width: 100%;
     min-width: 750px; /* width para activar el scroll*/
     border-collapse: collapse;
   }
 
-  /* se agrega para evitar que el texto rompa las celdas  */
   .adm-table th,
   .adm-table td {
     padding: 10px;
     text-align: center;
-    white-space: normal; /* se agrega para  que nombres largos salten de línea sin estirar la tabla al infinito (como wrap) */
+    white-space: normal;
   }
 }
 
-@media (width < 478px) {
+@media (width < 480px) {
   footer {
     display: flex;
     flex-direction: column;
@@ -1010,13 +1091,17 @@ label[for="filtrar"] {
     img {
       width: 50%;
     }
+
+    .contact-info {
+      width: 100%;
+    }
   }
 
   .adm-prod {
     width: 100%;
-    max-width: 100vw; /* Evitar que el contenedor sea más grande que la pantalla */
+    max-width: 100vw; /*se agrega para evitar que el cntedor sea + grande que la pantalla */
     overflow-x: auto;
-    overflow-y: hidden; /* para evitar barra vertical  */
+    overflow-y: hidden; /*  evitr barra vertical  */
     display: block; /* Asegurar   comportamiento   bloque */
     box-sizing: border-box;
   }
@@ -1028,12 +1113,38 @@ label[for="filtrar"] {
     border-collapse: collapse;
   }
 
-  /* se agrega para evitar que el texto rompa las celdas  */
   .adm-table th,
   .adm-table td {
     padding: 10px;
     text-align: center;
-    white-space: normal; /* se agrega para  que nombres largos salten de línea sin estirar la tabla al infinito (como wrap) */
+    white-space: normal;
+  }
+
+  .contact-body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden !important; /*se agrego imrpotarnt par quitar scrllbvar en el mapa*/
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .map {
+    width: 100%;
+    max-width: 100%;
+    margin: 20px 0;
+  }
+
+  /* se ajusta el map ebebido para que no cause ovrflw */
+  .map iframe {
+    width: 100%;
+    height: 250px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
   }
 }
 
@@ -1071,7 +1182,7 @@ label[for="filtrar"] {
     max-width: 100vw; /* Evitar que el contenedor sea más grande que la pantalla */
     overflow-x: auto;
     overflow-y: hidden; /* para evitar barra vertical  */
-    display: block; /* Asegurar   comportamiento   bloque */
+    display: block;
     box-sizing: border-box;
   }
 
@@ -1082,12 +1193,16 @@ label[for="filtrar"] {
     border-collapse: collapse;
   }
 
-  /* se agrega para evitar que el texto rompa las celdas  */
   .adm-table th,
   .adm-table td {
     padding: 10px;
     text-align: center;
-    white-space: normal; /* se agrega para  que nombres largos salten de línea sin estirar la tabla al infinito (como wrap) */
+    white-space: normal;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -1097,25 +1212,23 @@ label[for="filtrar"] {
   }
   .adm-prod {
     width: 100%;
-    max-width: 100vw; /* Evitar que el contenedor sea más grande que la pantalla */
+    max-width: 100vw; /*se agrega para evitar que el cntedor sea + grande que la pantalla */
     overflow-x: auto;
     overflow-y: hidden; /* para evitar barra vertical  */
-    display: block; /* Asegurar   comportamiento   bloque */
+    display: block;
     box-sizing: border-box;
   }
 
-  /*   Mantener la tabla con un tamaño mínimo  */
   .adm-table {
     width: 100%;
     min-width: 750px; /* width para activar el scroll*/
     border-collapse: collapse;
   }
 
-  /* se agrega para evitar que el texto rompa las celdas  */
   .adm-table th,
   .adm-table td {
     padding: 10px;
     text-align: center;
-    white-space: normal; /* se agrega para  que nombres largos salten de línea sin estirar la tabla al infinito (como wrap) */
+    white-space: normal;
   }
 }
